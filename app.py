@@ -45,6 +45,7 @@ def assign_elevator():
     elevator_load_input = int(request.form['elevator_load'])
     direction_of_travel_input = int(request.form['direction_of_travel'])
 
+    # Ensure variable names match those in the fuzzy control system
     elevator_simulation.input['current_floor'] = current_floor_input
     elevator_simulation.input['destination_floor'] = destination_floor_input
     elevator_simulation.input['number_of_passengers'] = number_of_passengers_input
