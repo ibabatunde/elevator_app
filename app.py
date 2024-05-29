@@ -51,9 +51,11 @@ rule1 = ctrl.Rule(number_of_passengers['many'] & elevator_load['light'] & direct
 rule2 = ctrl.Rule(current_floor['low'] & destination_floor['high'] & direction_of_travel['idle'], elevator_assignment['elevator_2'])
 rule3 = ctrl.Rule(current_floor['high'] & destination_floor['low'] & direction_of_travel['idle'], elevator_assignment['elevator_3'])
 rule4 = ctrl.Rule(number_of_passengers['few'] & elevator_load['heavy'], elevator_assignment['elevator_4'])
+rule5 = ctrl.Rule(direction_of_travel['up'], elevator_assignment['elevator_1'])
+rule6 = ctrl.Rule(direction_of_travel['down'], elevator_assignment['elevator_2'])
 
 # Create the control system
-elevator_ctrl = ctrl.ControlSystem([rule1, rule2, rule3, rule4])
+elevator_ctrl = ctrl.ControlSystem([rule1, rule2, rule3, rule4, rule5, rule6])
 elevator_sim = ctrl.ControlSystemSimulation(elevator_ctrl)
 
 @app.route('/')
