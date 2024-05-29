@@ -4,13 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elevator Assignment Result</title>
-    <link rel="stylesheet" href="static/styles.css" />
+    <style>
+      body {
+        background-color: #f0f8ff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 2em;
+      }
+      h1 {
+        color: #333;
+      }
+      p {
+        background-color: #fff;
+        padding: 1em;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+      }
+      a {
+        display: inline-block;
+        margin-top: 1em;
+        background-color: #007bff;
+        color: white;
+        padding: 1em;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      a:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Elevator Assignment Result</h1>
-      <p>Assigned Elevator: {{ assigned_elevator }}</p>
-      <a href="/" class="back-btn">Go Back</a>
-    </div>
+    <h1>Elevator Assignment Result</h1>
+    <p>Assigned Elevator: {{ assigned_elevator }}</p>
+    <a href="/">Go Back</a>
   </body>
 </html>

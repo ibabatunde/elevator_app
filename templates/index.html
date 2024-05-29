@@ -4,61 +4,100 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elevator Control System</title>
-    <link rel="stylesheet" href="static/styles.css" />
+    <style>
+      body {
+        background-color: #f0f8ff;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 2em;
+      }
+      h1 {
+        color: #333;
+      }
+      form {
+        background-color: #fff;
+        padding: 2em;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        max-width: 400px;
+        width: 100%;
+      }
+      label {
+        display: block;
+        margin-top: 1em;
+      }
+      input,
+      select {
+        width: calc(100% - 20px);
+        padding: 0.5em;
+        margin-top: 0.5em;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 1em;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 1em;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Elevator Control System</h1>
-      <form action="/assign_elevator" method="post">
-        <label for="current_floor">Current Floor:</label>
-        <input
-          type="number"
-          id="current_floor"
-          name="current_floor"
-          min="1"
-          max="18"
-          required
-        /><br /><br />
+    <h1>Elevator Control System</h1>
+    <form action="/assign_elevator" method="post">
+      <label for="current_floor">Current Floor:</label>
+      <input
+        type="number"
+        id="current_floor"
+        name="current_floor"
+        min="1"
+        max="18"
+        required
+      /><br /><br />
 
-        <label for="destination_floor">Destination Floor:</label>
-        <input
-          type="number"
-          id="destination_floor"
-          name="destination_floor"
-          min="1"
-          max="18"
-          required
-        /><br /><br />
+      <label for="destination_floor">Destination Floor:</label>
+      <input
+        type="number"
+        id="destination_floor"
+        name="destination_floor"
+        min="1"
+        max="18"
+        required
+      /><br /><br />
 
-        <label for="number_of_passengers">Number of Passengers:</label>
-        <input
-          type="number"
-          id="number_of_passengers"
-          name="number_of_passengers"
-          min="0"
-          max="20"
-          required
-        /><br /><br />
+      <label for="number_of_passengers">Number of Passengers:</label>
+      <input
+        type="number"
+        id="number_of_passengers"
+        name="number_of_passengers"
+        min="0"
+        max="20"
+        required
+      /><br /><br />
 
-        <label for="elevator_load">Elevator Load (%):</label>
-        <input
-          type="number"
-          id="elevator_load"
-          name="elevator_load"
-          min="0"
-          max="100"
-          required
-        /><br /><br />
+      <label for="elevator_load">Elevator Load (%):</label>
+      <input
+        type="number"
+        id="elevator_load"
+        name="elevator_load"
+        min="0"
+        max="100"
+        required
+      /><br /><br />
 
-        <label for="direction_of_travel">Direction of Travel:</label>
-        <select id="direction_of_travel" name="direction_of_travel" required>
-          <option value="0">Idle</option>
-          <option value="1">Up</option>
-          <option value="2">Down</option></select
-        ><br /><br />
+      <label for="direction_of_travel">Direction of Travel:</label>
+      <select id="direction_of_travel" name="direction_of_travel" required>
+        <option value="0">Idle</option>
+        <option value="1">Up</option>
+        <option value="2">Down</option></select
+      ><br /><br />
 
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
+      <input type="submit" value="Submit" />
+    </form>
   </body>
 </html>
